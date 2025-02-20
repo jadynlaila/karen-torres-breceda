@@ -1,3 +1,4 @@
+import React from "react"
 import './App.css'
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber'
 import { Suspense, useRef, useState } from 'react'
@@ -55,7 +56,7 @@ function ClickableImage({ url, descriptorUrl, enlargedHeight, isActive, startPos
 
 function UpdateSceneBackground() {
   const { scene } = useThree();
-  const texture = useTexture('/IMG_4161.jpg');
+  const texture = useTexture('/background.png');
   texture.colorSpace = SRGBColorSpace;
   scene.background = texture;
 }
@@ -66,7 +67,7 @@ function App() {
 
   const images = [
     { id:1, url: "/no_background.png", descriptorUrl: "/speech-bubble.png", position: [-2, 2, 0], defaultHeight: 2, enlargedHeight: 6 },
-    { id:2, url: "/IMG_4161.jpg", descriptorUrl: "/speech-bubble.png", position: [2, 2, 0], defaultHeight: 1, enlargedHeight: 5},
+    { id:2, url: "/background.png", descriptorUrl: "/speech-bubble.png", position: [2, 2, 0], defaultHeight: 1, enlargedHeight: 5},
   ];
 
 

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.invite-container {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
+
+.invite {
+    background-color: white;
+    background-image: url('/public/invite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}   
+

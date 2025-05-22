@@ -4,20 +4,38 @@
     box-sizing: border-box;
 }
 
-
-.invite-container {
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
+#root{
+     background-color: white;
 }
 
-.invite {
-    background-color: white;
-    background-image: url('/public/invite.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    width: 100vw;
-}   
 
+@font-face { 
+    font-family: "magnolia";
+    src: url("./fonts/Magnolia.ttf");
+}
+
+
+body{ 
+    margin: 0; 
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: white; 
+}
+
+.invite-container-container { 
+    width: 35vw;
+    height: 85vh;
+}
+
+.invite-container {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.invite-image { 
+    width: 100%;
+    height: auto;
+}

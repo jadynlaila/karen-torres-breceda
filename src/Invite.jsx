@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react"
 import './Invite.css'
-import { Link } from "react-router-dom"
+import { useNavigate} from "react-router-dom"
 import ImageMapper from 'react-img-mapper'
 import { useRef } from "react";
 
 function Invite() {
     const containerRef = useRef(null); 
     const [parentWidth, setParentWidth] = useState(0);
+    const navigate = useNavigate();
 
     const mapAreas = [{
         "id": "1",
         "title": "About",
         "shape": "square",
         "name": "1",
-        "href": "/about",
         "coords": [
             51,517,153,550
         ],
@@ -23,7 +23,6 @@ function Invite() {
         "title": "Gallery",
         "shape": "square",
         "name": "2",
-        "href": "/gallery",
         "coords": [
             228,514,341,551
         ],
@@ -33,7 +32,6 @@ function Invite() {
         "title": "Contact",
         "shape": "square",
         "name": "3",
-        "href": "/contact",
         "coords": [
             381,515,509,549
         ],
@@ -58,11 +56,23 @@ function Invite() {
         }
     }, []);
 
+    const handleImgClick = (area) => {
+        if (area.id === "1") {
+            navigate("/about");
+        }
+        else if (area.id === "2") {
+            navigate("/gallery");
+        }
+        else if (area.id === "3") {
+            navigate("/contact");
+        }
+    }
+
     return (
         <div className="invite-container-container">
             <div className="invite-container" ref={containerRef}>
                 {parentWidth > 0 && (
-                <ImageMapper src="invitationn.png" name="invitation-map" className="invite-image" areas={mapAreas} responsive={true} parentWidth={parentWidth}/>
+                <ImageMapper src="invitationn.png" name="invitation-map" className="invite-image" areas={mapAreas} responsive={true} parentWidth={parentWidth} onClick={handleImgClick}/>
                 )}
             </div>
         </div>

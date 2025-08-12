@@ -59,11 +59,22 @@ body{
     background-color: #f2f2f2; 
 }
 
+@keyframes fade-in {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
 .invite-container-container {
   display: flex;
   justify-content: center;  
   align-items: center;
   min-height: 100dvh;
+  animation: fade-in 3s;
 }
 
 .invite-container {

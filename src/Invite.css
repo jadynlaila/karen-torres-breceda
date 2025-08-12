@@ -4,15 +4,7 @@
     box-sizing: border-box;
 }
 
-#root{
-     background-color: white;
-}
 
-
-@font-face { 
-    font-family: "magnolia";
-    src: url("./fonts/Magnolia.ttf");
-}
 
 
 body{ 
@@ -21,12 +13,11 @@ body{
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: white; 
+    background-color: #f2f2f2; 
 }
 
 .invite-container-container { 
-    width: 35vw;
-    height: 85vh;
+    width: 37vw;
 }
 
 .invite-container {
@@ -39,3 +30,34 @@ body{
     width: 100%;
     height: auto;
 }
+
+@media (max-width: 700px){
+    .invite-container-container {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 500px) { 
+    .invite-container-container {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .invite-container-container {
+        width: 80vw;
+    }
+}
+
+/* @media only screen and (max-width: 800px) and (orientation: landscape) {
+    .piece {
+        max-width: 300px;
+    }
+
+    img {
+        max-width: 300px;
+    }
+} */
+
+
+

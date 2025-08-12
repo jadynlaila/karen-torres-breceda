@@ -4,9 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
-
 body{ 
     margin: 0; 
     display: flex;
@@ -14,6 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: #f2f2f2; 
+    overflow: hidden;
 }
 
 .invite-container-container { 

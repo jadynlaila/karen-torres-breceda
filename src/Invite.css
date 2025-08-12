@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -55,6 +55,38 @@ body{
         max-width: 300px;
     }
 } */
+body{ 
+    background-color: #f2f2f2; 
+}
 
+.invite-container-container {
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
 
+.invite-container {
+  width: 37%; 
+  max-width: 100%; 
+}
 
+@media (max-width: 900px) { 
+    .invite-container {
+        width: 45%;
+    }
+    
+}
+
+@media (max-width: 690px) {
+    .invite-container { 
+        width: 60%;
+    }
+}
+
+@media (max-width: 470px) {
+  .invite-container {
+    width: 85%;
+  }
+}
